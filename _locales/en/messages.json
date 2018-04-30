@@ -44,5 +44,19 @@
 "on_this_page":{"message" :"on this page."},
 "enable":{"message" :"Enable"},
 "disable":{"message" :"Disable"},
-"savelocal": {"message": "Save local"}
+"savelocal": {"message": "Save local"},
+"highlight": {"message": "Highlight"},
+"line": {"message": "Line"},
+"curvedline": {"message": "Curved line"},
+"spray": {"message": "Spray"},
+"text": {"message": "Text"},
+"rectangle": {"message": "Rectangle"},
+"squarefill": {"message": "Square fill"},
+"ellipsis": {"message": "Ellipsis"},
+"arrow": {"message": "Arrow"},
+"star": {"message": "Star"},
+"house": {"message": "House"},
+"crop": {"message": "Crop"},
+"undo": {"message": "Undo"},
+"redo": {"message": "Redo"}
 }
