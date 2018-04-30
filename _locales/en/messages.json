@@ -43,5 +43,6 @@
 "must_reload_tabs":{"message" :"Must reload all pages, before it will take effect"},
 "on_this_page":{"message" :"on this page."},
 "enable":{"message" :"Enable"},
-"disable":{"message" :"Disable"}
+"disable":{"message" :"Disable"},
+"savelocal": {"message": "Save local"}
 }
