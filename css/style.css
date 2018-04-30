@@ -7,57 +7,6 @@ a {
     cursor:pointer;
 }
 
-@media (max-width: 1600px) {
-	.editor-toolbar button.save,
-	.editor-toolbar button.view {
-		text-indent: -9999px;
-		font-size: 0;
-		margin-right: 0!important;
-	}
-}
-@media (max-width: 1410px) {
-	.buttons .url-share {
-		width: 140px !important;
-		background-position-x: 115px!important;
-	}
-	.editor-toolbar {
-		padding-right: 0!important;
-		padding-left: 0!important;
-	}
-}
-@media (max-width: 1300px) {
-	.editor-toolbar .donation span {
-		text-indent: -9999px;
-		padding: 0 16px!important;
-	}
-	.editor-toolbar button.save-to-url,
-	.editor-toolbar button.save {
-		text-indent: -9999px;
-		font-size: 0;
-	}
-	.editor-toolbar button.save-to-url .icon,
-	.editor-toolbar button.save .icon {
-		margin-right: 0!important;
-	}
-}
-@media (max-width: 1100px) {
-	.buttons {
-		margin-left: 0!important;
-	}
-	.editor-toolbar .tools {
-		margin-left: 2px!important;
-	}
-	.editor-toolbar .tools button,
-	.editor-toolbar .tools button span {
-		width: 26px!important;
-	}
-}
-@media (max-width: 1000px) {
-	.buttons .url-share {
-		width: 80px !important;
-		background-position-x: 55px!important;
-	}
-}
 #working {
     position: fixed;
     top: 0;
@@ -578,6 +527,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .buttons button {
 	float: left;
 	margin-left: 4px;
+	margin-right: 4px;
 	background: #2a84ff;
 	border: none;
 	color: #fff;
@@ -661,6 +611,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .buttons button.save .icon {
 	background-image: url(../images/save.png);
 	margin-right: 5px;
+}
+.buttons button.save .save__title {
+	width: auto;
 }
 .buttons button.share .icon {
 	background-image: url(../images/share.png);

@@ -32,5 +32,6 @@
 "loadcapturescript" : {"message" : "Загрузка скрипта захвата..."},
 "cannotscroll" : {"message" : "Не может завиться страницу <br> <br/> Перезапустите вкладку"},
 "takingcapture" : {"message" : "Захват"},
-"createimage" : {"message" : " Создание картинки..."}
+"createimage" : {"message" : " Создание картинки..."},
+"savelocal": {"message": "Сохранить локально"}
 }

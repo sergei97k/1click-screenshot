@@ -18,6 +18,8 @@
   <script src="js/pdf.js"></script>
   <script src="editor.js"></script>
   <script src="libs\svgcanvas.js"></script>
+
+  <script type="text/javascript" src="js/translate.js"></script>
 </head>
 <body id="page-editor">
 <div id="header">
@@ -61,7 +63,12 @@
     </div>
     <div class="buttons">
       <!-- <button title="Share" class="share" style="text-indent: initial;font-size:inherit"><span class="icon"></span> Share</button> -->
-      <button title="Save Local" class="save"><span class="icon"></span> Save local</button>
+      <button class="save">
+        <span class="icon"></span>
+        <span tr="savelocal" class="save__title">
+          Save local
+        </span>
+      </button>
       <!-- <button title="Save to PDF" class="pdf save-to-pdf"><span class="icon"></span></button> -->
       <!-- <button title="Copy" class="copy save-to-clipboard"><span class="icon"></span></button> -->
       <!-- <button title="Thumbnail" class="thumbnail save-to-thumbnail"><span class="icon"></span></button> -->
