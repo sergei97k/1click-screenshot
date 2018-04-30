@@ -5,6 +5,7 @@
   <title>Screenshot Editor</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href="css/style.css" rel="stylesheet"/>
+  <link href="css/tooltip.css" rel="stylesheet"/>
   <link href="libs/colors.css" rel="stylesheet"/>
   <script src="libs/jquery.js"></script>
   <script src="settings.js"></script>
@@ -28,22 +29,64 @@
       <img src="images/photo-camera-64.png" alt="Screenshot Extension" />
     </a>
     <div class="tools">
-      <button tag="highlight" class="button highlight" status="on"><span></span></button>
-      <button tag="line" class="button line" status="on"><span></span></button>
-      <button tag="free" class="button curved-line" status="on"><span></span></button>
-      <button tag="spray" class="button spray" status="on"><span></span></button>
-      <button tag="text" class="button text" status="on"><span></span></button>
-      <button tag="rectangle" class="button square-empty" status="on"><span></span></button>
-      <button tag="full" class="button square-fill" status="on"><span></span></button>
-      <button tag="ellipsis" class="button oval" status="on"><span></span></button>
-      <button tag="arrow" class="button arrow" status="on"><span></span></button>
-      <button tag="star" class="button star" status="on"><span></span></button>
-      <button tag="house" class="button house" status="on"><span></span></button>
-      <button tag="crop" class="button crop last" status="on"><span></span></button>
+      <button class="button highlight tooltip" status="on">
+        <span></span>
+        <span class="tooltiptext" tr="highlight">Highlight</span>
+      </button>
+      <button class="button line tooltip" status="on">
+        <span></span>
+        <span class="tooltiptext" tr="line">Line</span>
+      </button>
+      <button class="button curved-line tooltip" status="on">
+        <span></span>
+        <span class="tooltiptext" tr="curvedline">Curved line</span>
+      </button>
+      <button class="button spray tooltip" status="on">
+        <span></span>
+        <span class="tooltiptext" tr="spray">Spray</span>
+      </button>
+      <button class="button text tooltip" status="on">
+        <span></span>
+        <span class="tooltiptext" tr="text">Text</span>
+      </button>
+      <button class="button square-empty tooltip" status="on">
+        <span></span>
+        <span class="tooltiptext" tr="rectangle">Rectangle</span>
+      </button>
+      <button class="button square-fill tooltip" status="on">
+        <span></span>
+        <span class="tooltiptext" tr="squarefill">Square fill</span>
+      </button>
+      <button class="button oval tooltip" status="on">
+        <span></span>
+        <span class="tooltiptext" tr="ellipsis">Ellipsis</span>
+      </button>
+      <button class="button arrow tooltip" status="on">
+        <span></span>
+        <span class="tooltiptext" tr="arrow">Arrow</span>
+      </button>
+      <button class="button star tooltip" status="on">
+        <span></span>
+        <span class="tooltiptext" tr="star">Star</span>
+      </button>
+      <button class="button house tooltip" status="on">
+        <span></span>
+        <span class="tooltiptext" tr="house">House</span>
+      </button>
+      <button class="button crop last tooltip" status="on">
+        <span></span>
+        <span class="tooltiptext" tr="crop">Crop</span>
+      </button>
     </div>
     <div class="tools">
-      <button tag="undo" class="button undo disable"><span></span></button>
-      <button tag="redo" class="button last redo disable"><span></span></button>
+      <button class="button undo disable tooltip">
+        <span></span>
+        <span class="tooltiptext" tr="undo">Undo</span>
+      </button>
+      <button class="button last redo disable tooltip">
+        <span></span>
+        <span class="tooltiptext" tr="redo">Redo</span>
+      </button>
     </div>
     <div class="tools" id="wColorPicker2_3">
     </div>

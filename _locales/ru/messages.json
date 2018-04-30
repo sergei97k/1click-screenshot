@@ -33,5 +33,19 @@
 "cannotscroll" : {"message" : "Не может завиться страницу <br> <br/> Перезапустите вкладку"},
 "takingcapture" : {"message" : "Захват"},
 "createimage" : {"message" : " Создание картинки..."},
-"savelocal": {"message": "Сохранить локально"}
+"savelocal": {"message": "Сохранить локально"},
+"highlight": {"message": "Подчеркивание"},
+"line": {"message": "Линия"},
+"curvedline": {"message": "Изогнутая линия"},
+"spray": {"message": "Распылитель"},
+"text": {"message": "Текст"},
+"rectangle": {"message": "Прямоугольник"},
+"squarefill": {"message": "Заполненный прямоугольник"},
+"ellipsis": {"message": "Круг"},
+"arrow": {"message": "Стрелка"},
+"star": {"message": "Звезда"},
+"house": {"message": "Дом"},
+"crop": {"message": "Вырезать"},
+"undo": {"message": "Назад"},
+"redo": {"message": "Вперед"}
 }

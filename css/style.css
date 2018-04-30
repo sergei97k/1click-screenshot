@@ -411,7 +411,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .editor-toolbar .tools button:active {
 	background: rgba(0,0,0,0.1);
 }
-.editor-toolbar .tools button span {
+.editor-toolbar .tools button span:not(.tooltiptext) {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -421,49 +421,49 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	background-position: center;
 	background-repeat: no-repeat;
 }
-.editor-toolbar .tools button.line span {
+.editor-toolbar .tools button.line span:first-of-type {
 	background-image: url(../images/line-icon.png);
 }
-.editor-toolbar .tools button.curved-line span {
+.editor-toolbar .tools button.curved-line span:first-of-type {
 	background-image: url(../images/curved-line-icon.png);
 }
-.editor-toolbar .tools button.spray span {
+.editor-toolbar .tools button.spray span:first-of-type {
 	background-image: url(../images/spray-icon.png);
 }
-.editor-toolbar .tools button.highlight span {
+.editor-toolbar .tools button.highlight span:first-of-type {
 	background-image: url(../images/highlight.png);
 }
-.editor-toolbar .tools button.text span {
+.editor-toolbar .tools button.text span:first-of-type {
 	background-image: url(../images/text-icon.png);
 }
-.editor-toolbar .tools button.square-empty span {
+.editor-toolbar .tools button.square-empty span:first-of-type {
 	background-image: url(../images/square-empty-icon.png);
 }
-.editor-toolbar .tools button.square-fill span {
+.editor-toolbar .tools button.square-fill span:first-of-type {
 	background-image: url(../images/square-fill-icon.png);
 }
-.editor-toolbar .tools button.oval span {
+.editor-toolbar .tools button.oval span:first-of-type {
 	background-image: url(../images/oval-icon.png);
 }
-.editor-toolbar .tools button.arrow span {
+.editor-toolbar .tools button.arrow span:first-of-type {
 	background-image: url(../images/arrow-icon.png);
 }
-.editor-toolbar .tools button.star span {
+.editor-toolbar .tools button.star span:first-of-type {
 	background-image: url(../images/star-icon.png);
 }
-.editor-toolbar .tools button.house span {
+.editor-toolbar .tools button.house span:first-of-type {
 	background-image: url(../images/house-icon.png);
 }
-.editor-toolbar .tools button.crop span {
+.editor-toolbar .tools button.crop span:first-of-type {
 	background-image: url(../images/crop-icon.png);
 }
-.editor-toolbar .tools button.undo span {
+.editor-toolbar .tools button.undo span:first-of-type {
 	background-image: url(../images/undo-icon.png);
 }
-.editor-toolbar .tools button.redo span {
+.editor-toolbar .tools button.redo span:first-of-type {
 	background-image: url(../images/redo-icon.png);
 }
-.editor-toolbar .tools button.line-size span {
+.editor-toolbar .tools button.line-size span:first-of-type {
 	background-image: url(../images/line-size-icon.png);
 }
 .editor-toolbar .tools button.line-size.on {
