@@ -7,40 +7,6 @@ a {
     cursor:pointer;
 }
 
-@media (max-width: 1410px) {
-	.buttons .url-share {
-		width: 140px !important;
-		background-position-x: 115px!important;
-	}
-	.editor-toolbar {
-		padding-right: 0!important;
-		padding-left: 0!important;
-	}
-}
-@media (max-width: 1300px) {
-	.editor-toolbar .donation span {
-		text-indent: -9999px;
-		padding: 0 16px!important;
-	}
-}
-@media (max-width: 1100px) {
-	.buttons {
-		margin-left: 0!important;
-	}
-	.editor-toolbar .tools {
-		margin-left: 2px!important;
-	}
-	.editor-toolbar .tools button,
-	.editor-toolbar .tools button span {
-		width: 26px!important;
-	}
-}
-@media (max-width: 1000px) {
-	.buttons .url-share {
-		width: 80px !important;
-		background-position-x: 55px!important;
-	}
-}
 #working {
     position: fixed;
     top: 0;
