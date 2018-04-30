@@ -509,10 +509,37 @@ function editor_obj()
 		{
 		canvas=$('canvas')[1];
 					img=$('#imgFixForLong')[0];
+
+					// Change image size
+					let isImgLoad = false;
+					const PERCENT = 75;
+
 					img.onload=function (){
-						canvas.width=this.width
-						canvas.height=this.height
-						firstImage=this
+						if (isImgLoad) return;
+						isImgLoad = true;
+
+						const image = new Image();
+                        image.src = imageToDataUri(img, (this.width * PERCENT) / 100, (this.height * PERCENT) / 100);
+
+                        function imageToDataUri(img, width, height) {
+                            var canvas = document.createElement('canvas'),
+                                ctx = canvas.getContext('2d');
+
+                            canvas.width = width;
+                            canvas.height = height;
+
+                            ctx.drawImage(img, 0, 0, width, height);
+
+                            return canvas.toDataURL('image/png');
+                        }
+
+                        $($('#imgFixForLong')[0]).attr('src', image.src);
+
+						
+						canvas.width = (this.width * PERCENT) / 100;
+						canvas.height = (this.height * PERCENT) / 100;
+						firstImage = this;
+
 						canvas.getContext('2d').drawImage(this,0,0)
 						// $(this).css({
 						// 	width:this.width,
