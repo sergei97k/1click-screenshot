@@ -1521,7 +1521,7 @@ function editor_obj()
 		$('.button[tag=redo]')[maxIndex>currentIndex ? 'removeClass' :'addClass']('disable');
 
 		$('#toolbar .button').each(function()	{
-			$(this).attr('title', $(this).attr('tag'));
+			// $(this).attr('title', $(this).attr('tag'));
 			if ($(this).attr('status')=="on"){
 				$(this).attr({'src':'images/drawing/' + $(this).attr('tag')+ ($(this).attr("tag")==tool.current? 'On' : 'Off') + '.png'})
 						.css({'cursor':'pointer'});
