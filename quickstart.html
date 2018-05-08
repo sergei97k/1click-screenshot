@@ -150,84 +150,45 @@
                 Zdw01ZhhYkABSwgmf1Z6r1SNyfFf4BZ+ZUExcNUQUAAAAASUVORK5
                 CYII=`;
 
-      fetch(base64)
-        .then(res => res.blob())
-        .then(blob => {
-          const file = new File([blob], "File name");
-          console.log(file);
+      const boundary = '-------314159265358979323846';
+      const delimiter = `\r\n--${boundary}\r\n`;
+      const close_delim =  `\r\n--${boundary}--`;
 
-          const boundary = '-------314159265358979323846';
-          const delimiter = "\r\n--" + boundary + "\r\n";
-          const close_delim = "\r\n--" + boundary + "--";
+      const contentType = 'image/png';
+      const base64Str = base64.split(',')[1];
 
-          const contentType = 'image/png';
+      const metadata = {
+        'name': `Photo ${new Date().getTime()}`,
+        'mimeType': contentType
+      };
 
-          const metadata = {
-            'name': 'Photo',
-            'mimeType': contentType
-          };
+      const body = `${delimiter}` +
+        `Content-Type: application/json; charset=UTF-8\r\n\r\n` +
+        `${JSON.stringify(metadata)}` +
+        `${delimiter}` +
+        `Content-Type: ${contentType}\r\n` +
+        `Content-Transfer-Encoding: base64\r\n\r\n` +
+        `${base64Str}` +
+        `${close_delim}`;
 
-          const multipartRequestBody =
-              delimiter +
-              'Content-Type: application/json; charset=UTF-8\r\n\r\n' +
-              JSON.stringify(metadata) +
-              delimiter +
-              'Content-Type: ' + contentType + '\r\n\r\n' +
-              file +
-              close_delim;
-
-
-          /* axios.post(
-            'https://www.googleapis.com/upload/drive/v3/files',
-            multipartRequestBody,
-            {
-              params: {
-                'uploadType': 'multipart'
-              },
-              headers: {
-                // 'Content-Type': 'image/png',
-                'Content-Type': 'multipart/related; boundary="' + boundary + '"',
-                'Authorization': `Bearer ${auth_token}`
-              }
-            }
-          ).then(
-            res => {
-              console.log(res);
-            },
-            console.error
-          ); */
-
-          axios.post(
-            'https://www.googleapis.com/upload/drive/v3/files',
-            file,
-            {
-              params: {
-                'uploadType': 'media'
-              },
-              headers: {
-                'Content-Type': 'image/png',
-                'Authorization': `Bearer ${auth_token}`
-              }
-            }
-          ).then(
-            res => {
-              console.log(res);
-
-              axios.patch(
-                `https://www.googleapis.com/drive/v3/files/${res.data.id}`,
-                {
-                  name: `Photo ${new Date().getTime()}`
-                },
-                {
-                  headers: {
-                    'Authorization': `Bearer ${auth_token}`
-                  }
-                }
-              )
-            },
-            console.error
-          )
-        })
+      axios.post(
+        'https://www.googleapis.com/upload/drive/v3/files',
+        body,
+        {
+          params: {
+           'uploadType': 'multipart'
+          },
+          headers: {
+           'Content-Type': `multipart/related; boundary="${boundary}"`,
+           'Authorization': `Bearer ${auth_token}`
+          }
+        }
+      ).then(
+        res => {
+          console.log(res);
+        },
+        console.error
+      );
     }
 
   </script>
