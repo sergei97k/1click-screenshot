@@ -39,6 +39,13 @@
     ],
     "offline_enabled":true,
     "default_locale": "en",
-    "permissions": ["activeTab"],
-    "optional_permissions": ["desktopCapture" ]
+    "permissions": ["activeTab", "identity"],
+    "optional_permissions": ["desktopCapture" ],
+    "key": "",
+    "oauth2": {
+        "client_id": "",
+        "api_key": "",
+        "scopes":[""],
+        "discovery_docs": [""]
+    }
 }

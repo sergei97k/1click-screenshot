@@ -612,7 +612,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	background-image: url(../images/save.png);
 	margin-right: 5px;
 }
-.buttons button.save .save__title {
+.buttons button .save__title {
 	width: auto;
 }
 .buttons button.share .icon {

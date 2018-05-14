@@ -58,5 +58,6 @@
 "house": {"message": "House"},
 "crop": {"message": "Crop"},
 "undo": {"message": "Undo"},
-"redo": {"message": "Redo"}
+"redo": {"message": "Redo"},
+"savedrive": {"message": "Save to Google Drive"}
 }

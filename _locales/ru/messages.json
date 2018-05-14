@@ -47,5 +47,6 @@
 "house": {"message": "Дом"},
 "crop": {"message": "Вырезать"},
 "undo": {"message": "Назад"},
-"redo": {"message": "Вперед"}
+"redo": {"message": "Вперед"},
+"savedrive": {"message": "Сохранить на Google Диск"}
 }
