@@ -109,49 +109,11 @@ var sizes = {
                     data.image_url = function(callback) {
                         var imageData = this.image_data();
 
-                        chrome.identity.getAuthToken({interactive: true}, function(auth_token) {
-                            const base64 = imageData;
-    
-                            const boundary = '-------314159265358979323846';
-                            const delimiter = `\r\n--${boundary}\r\n`;
-                            const close_delim =  `\r\n--${boundary}--`;
-    
-                            const contentType = 'image/png';
-                            const base64Str = base64.split(',')[1];
-    
-                            const metadata = {
-                                'name': 'Name',
-                                'mimeType': contentType
-                            };
-    
-                            const body = `${delimiter}` +
-                                `Content-Type: application/json; charset=UTF-8\r\n\r\n` +
-                                `${JSON.stringify(metadata)}` +
-                                `${delimiter}` +
-                                `Content-Type: ${contentType}\r\n` +
-                                `Content-Transfer-Encoding: base64\r\n\r\n` +
-                                `${base64Str}` +
-                                `${close_delim}`;
-    
-                            axios.post(
-                                'https://www.googleapis.com/upload/drive/v3/files',
-                                body,
-                                {
-                                  params: {
-                                   'uploadType': 'multipart'
-                                  },
-                                  headers: {
-                                   'Content-Type': `multipart/related; boundary="${boundary}"`,
-                                   'Authorization': `Bearer ${auth_token}`
-                                  }
-                                }
-                            )
-                            .then(
-                                res => {
-                                    // alert(res);
-                                },
-                                console.error
-                            );
+                        chrome.identity.getAuthToken({interactive: true}, function(token) {
+                            localStorage.screenshotData = imageData;
+                            localStorage.token = token;
+
+                            location.assign('../build/index.html');
                         });
 
                         if (this.toolbar && imageData == this.toolbar.last_image_data) {
